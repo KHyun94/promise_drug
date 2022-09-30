@@ -19,14 +19,14 @@ class _LoginScreenState extends State<LoginScreen> {
 
     return Scaffold(
         body: Container(
-      color: Colors.white,
-      padding: EdgeInsets.only(top: statusBarHeight),
-      child: Column(
-        children: <Widget>[
-          topLogoWidget(deviceWidth, (deviceHeight / 2)),
-          bottomLoginWidget(deviceWidth, (deviceHeight / 2))
-        ],
-      ),
+          color: Colors.white,
+          padding: EdgeInsets.only(top: statusBarHeight),
+          child: Column(
+            children: <Widget>[
+              topLogoWidget(deviceWidth, (deviceHeight / 2)),
+              bottomLoginWidget(deviceWidth, (deviceHeight / 2))
+            ],
+          ),
     ));
   }
 
