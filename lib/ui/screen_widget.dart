@@ -32,7 +32,7 @@ class _SplashScreenState extends State<SplashScreen> {
     super.initState();
 
     // TODO 로그인 상태 체크, 권한체크, 네트워크 상태 체크
-    Future.delayed(const Duration(milliseconds: 2000), () {
+    Future.delayed(const Duration(milliseconds: 0), () {
 
       Get.toNamed("/login");
     });

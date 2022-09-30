@@ -23,8 +23,8 @@ class _LoginScreenState extends State<LoginScreen> {
       padding: EdgeInsets.only(top: statusBarHeight),
       child: Column(
         children: <Widget>[
-          topLogoWidget(deviceWidth, deviceHeight / 2),
-          bottomLoginWidget(deviceWidth, deviceHeight / 2)
+          topLogoWidget(deviceWidth, (deviceHeight / 2)),
+          bottomLoginWidget(deviceWidth, (deviceHeight / 2))
         ],
       ),
     ));
@@ -55,7 +55,12 @@ class _LoginScreenState extends State<LoginScreen> {
           children: <Widget>[
             SvgPicture.asset('assets/icons/ic_drug.svg',
                 width: 200, height: 200),
-            logoComment
+            const Text(
+              "🅿 🆁 🆄 🅶",
+              style: TextStyle(fontSize: 32, fontWeight: FontWeight.bold),
+              textAlign: TextAlign.center,
+            ),
+            logoComment,
           ],
         ),
       );
@@ -67,6 +72,27 @@ class _LoginScreenState extends State<LoginScreen> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.end,
           children: <Widget>[
+            Container(
+              margin: const EdgeInsets.only(left: 36, right: 36, bottom: 24),
+              child: Stack(alignment: Alignment.center, children: <Widget>[
+                Container(
+                    width: 500,
+                    child: const Divider(color: Colors.grey, thickness: 2.0)),
+                Container(
+                  padding: const EdgeInsets.all(4),
+                  color: Colors.white,
+                  child: const Text("로그인",
+                      style: TextStyle(
+                          color: Colors.grey, fontWeight: FontWeight.bold)),
+                ),
+              ]),
+            ),
+            loginButton(
+              width,
+              52,
+              "카카오로 로그인하기",
+              const EdgeInsets.only(left: 36, right: 36, bottom: 20),
+            ),
             loginButton(
               width,
               52,
@@ -84,17 +110,12 @@ class _LoginScreenState extends State<LoginScreen> {
           width: width,
           height: 52,
           decoration: const BoxDecoration(
-              color: Colors.yellow,
+              color: Colors.black,
               borderRadius: BorderRadius.all(Radius.circular(16))),
           child: Center(
               child: TextButton.icon(
-            onPressed: () {},
-            label: Text(content,
-                style: const TextStyle(color: Colors.white, fontSize: 24)),
-            icon: SvgPicture.asset(
-              "assets/icons/ic_kakao.svg",
-              width: 24,
-              height: 24,
-            ),
+                onPressed: () {},
+                label: Text(content, style: const TextStyle(color: Colors.white, fontSize: 24)),
+                icon: SvgPicture.asset("assets/icons/ic_kakao.svg", width: 24, height: 24, color: Colors.white),
           )));
 }
