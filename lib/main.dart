@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 import 'package:promise_drug/ui/login_widget.dart';
 import 'package:promise_drug/ui/screen_widget.dart';
@@ -26,7 +25,7 @@ class MyApp extends StatelessWidget {
       initialRoute: '/',
       getPages: [
         GetPage(name: "/", page: () => const SplashScreen()),
-        GetPage(name: "/login", page: () => LoginScreen()),
+        GetPage(name: "/login", page: () => const LoginScreen()),
       ],
       home: const SplashScreen(),
     );

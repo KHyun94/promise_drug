@@ -75,9 +75,9 @@ class _LoginScreenState extends State<LoginScreen> {
             Container(
               margin: const EdgeInsets.only(left: 36, right: 36, bottom: 24),
               child: Stack(alignment: Alignment.center, children: <Widget>[
-                Container(
+                const SizedBox(
                     width: 500,
-                    child: const Divider(color: Colors.grey, thickness: 2.0)),
+                    child: Divider(color: Colors.grey, thickness: 2.0)),
                 Container(
                   padding: const EdgeInsets.all(4),
                   color: Colors.white,
