@@ -41,7 +41,7 @@ dependencies:
   cupertino_icons: ^1.0.2
   flutter_svg: ^1.0.1
   get: ^4.6.5
-#  kakao_flutter_sdk: ^1.1.0
+  kakao_flutter_sdk: ^1.1.0
 
 dev_dependencies:
   flutter_test:

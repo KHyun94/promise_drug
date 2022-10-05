@@ -1,9 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:kakao_flutter_sdk/kakao_flutter_sdk.dart';
 import 'package:promise_drug/ui/login_widget.dart';
 import 'package:promise_drug/ui/screen_widget.dart';
 
 void main() {
+
+  KakaoSdk.init(nativeAppKey: 'eda5b48c8c73d846f95b4838ef851224');
+
   runApp(const MyApp());
 }
 
@@ -12,7 +16,7 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GetMaterialApp(
+    return MaterialApp(
       builder: (context, child) {
         return MediaQuery(
             data: MediaQuery.of(context).copyWith(textScaleFactor: 1),

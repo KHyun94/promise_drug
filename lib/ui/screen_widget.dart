@@ -22,7 +22,7 @@ class _SplashScreenState extends State<SplashScreen> {
 
     return Scaffold(
       body: Center(
-          child: topLogoWidget(deviceWidth, deviceHeight)),
+          child: _topLogoWidget(deviceWidth, deviceHeight)),
     );
   }
 
@@ -42,7 +42,7 @@ class _SplashScreenState extends State<SplashScreen> {
         style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold)),
   ]));
 
-  Widget topLogoWidget(double width, double height) => Container(
+  Widget _topLogoWidget(double width, double height) => Container(
     width: width,
     height: height,
     color: Colors.white,
